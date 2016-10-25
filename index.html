@@ -2,12 +2,113 @@
 <html lang="es" ng-app>
     <title>Búsqueda</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
 
 <body>
-<div>
- 	<p>¿Cuál es tu tema? : <input type="text" ng-model="name"></p>
- 	<h1>Tu tema es: {{name}}</h1>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="valign-wrapper">
+                    <h1 class="valign center-align">Biblioteca UAO</h1>
+                </div>
+            </div>
+            <div class="col s12 m1 l1"><p></p></div>
+            <div class="col s12 m10 l10">
+                        
+                  <!-- TEMA -->  
+                  <div class="row">
+                      <div class="card-panel red lighten-2">
+                          <span class="white-text">¿Qué le interesa en la investigación para su proyecto? Escriba el tema general:
+                          </span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="que" type="text" class="validate" ng-model="tema">
+                          <label for="tema">Tema</label>
+                      </div>
+                  </div>
+
+                  <!-- QUIEN -->  
+                  <div class="row">
+                      <div class="card-panel orange darken-2">
+                          <span class="white-text">Preguntate ¿a quién impacta el tema? ¿Qué población?..Personas, animales, el ambiente?:
+                          </span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="que" type="text" class="validate" ng-model="quien">
+                          <label for="tema">¿Quién?</label>
+                      </div>
+                  </div>
+
+                  <!-- QUE -->  
+                  <div class="row">
+                      <div class="card-panel teal">
+                          <span class="white-text">¿Qué aspecto del tema estás interesado? ¿las causas? Los efectos o implicaciones? ¿Las soluciones?:
+                          </span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="que" type="text" class="validate" ng-model="que">
+                          <label for="que">¿Qué?</label>
+                      </div>
+                  </div>
+                
+                  <!-- CUANDO -->
+                  <div class="row">
+                      <div class="card-panel green">
+                          <span class="white-text">¿Preguntate cuándo? ¿En la actualidad? ¿En el pasado? ¿Relacionado a un evento específico? o ¿En el futuro? :
+                          </span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="cuando" type="text" class="validate" ng-model="cuando">
+                          <label for="cuando">¿Cuándo?</label>
+                      </div>
+                  </div>
+
+                  <!-- CUANDO -->
+                  <div class="row">
+                      <div class="card-panel blue darken-4">
+                          <span class="white-text">Preguntate ¿En dónde? Paises, regiones, estados, lugares (espacios de trabajo, escuelas, virtualmente) :
+                          </span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="cuando" type="text" class="validate" ng-model="donde">
+                          <label for="cuando">¿Donde?</label>
+                      </div>
+                  </div>
+                
+                <!--
+                <p class="flow-text">El tema es: {{tema}}</p>
+                <p class="flow-text">Quién : {{quien}}</p>
+                <p class="flow-text">Qué: {{que}}</p>
+                <p class="flow-text">Cuando: {{cuando}}</p>
+                <p class="flow-text">Donde: {{donde}}</p> -->
+                <div class="collection">
+                    <a href="#!" class="collection-item">Tema:{{tema}}<span class="badge">1</span></a>
+                    <a href="#!" class="collection-item">¿Quién?:{{quien}}<span class="badge">1</span></a>
+                    <a href="#!" class="collection-item">¿Qué?:{{que}}<span class="badge">1</span></a>
+                    <a href="#!" class="collection-item">¿Cuándo?:{{cuando}}<span class="badge">1</span></a>
+                    <a href="#!" class="collection-item">¿Dónde?:{{donde}}<span class="badge">1</span
+                </div>
+                
+                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>buscar</a>
+            </div>
+            <div class="col s12 m1 l1"><p></p></div>
+            
+        </div> <!-- div row -->
+    </div> <!-- div container -->
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    
 </body>
 </html>
