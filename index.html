@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="es" ng-app>
+<html lang="es" ng-app="busquedaApp">
     <title>Búsqueda</title>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
-    
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
 
-<body>
+<body ng-controller="BusquedaController">
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -23,7 +23,6 @@
             </div>
             <div class="col s12 m1 l1"><p></p></div>
             <div class="col s12 m10 l10">
-                        
                   <!-- TEMA -->  
                   <div class="row">
                       <div class="card-panel red lighten-2">
@@ -34,7 +33,7 @@
                           <input id="que" type="text" class="validate" ng-model="tema">
                           <label for="tema">Tema</label>
                       </div>
-                  </div>
+                  </div> <!-- div row TEMA-->
 
                   <!-- QUIEN -->  
                   <div class="row">
@@ -46,7 +45,7 @@
                           <input id="que" type="text" class="validate" ng-model="quien">
                           <label for="tema">¿Quién?</label>
                       </div>
-                  </div>
+                  </div> <!-- div row QUIEN -->
 
                   <!-- QUE -->  
                   <div class="row">
@@ -58,7 +57,7 @@
                           <input id="que" type="text" class="validate" ng-model="que">
                           <label for="que">¿Qué?</label>
                       </div>
-                  </div>
+                  </div> <!-- div row QUE -->
                 
                   <!-- CUANDO -->
                   <div class="row">
@@ -70,7 +69,7 @@
                           <input id="cuando" type="text" class="validate" ng-model="cuando">
                           <label for="cuando">¿Cuándo?</label>
                       </div>
-                  </div>
+                  </div> <!-- div row CUANDO --> 
 
                   <!-- CUANDO -->
                   <div class="row">
@@ -82,14 +81,8 @@
                           <input id="cuando" type="text" class="validate" ng-model="donde">
                           <label for="cuando">¿Donde?</label>
                       </div>
-                  </div>
+                  </div> <!-- div row donde -->
                 
-                <!--
-                <p class="flow-text">El tema es: {{tema}}</p>
-                <p class="flow-text">Quién : {{quien}}</p>
-                <p class="flow-text">Qué: {{que}}</p>
-                <p class="flow-text">Cuando: {{cuando}}</p>
-                <p class="flow-text">Donde: {{donde}}</p> -->
                 <div class="collection">
                     <a href="#!" class="collection-item">Tema:{{tema}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Quién?:{{quien}}<span class="badge">1</span></a>
@@ -99,9 +92,9 @@
                 </div>
                 
                 <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>buscar</a>
-            </div>
+            </div> <!-- div col s12 m10 l10 -->
+                        
             <div class="col s12 m1 l1"><p></p></div>
-            
         </div> <!-- div row -->
     </div> <!-- div container -->
     
