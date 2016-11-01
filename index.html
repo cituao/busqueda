@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="busquedaApp">
     <title>Búsqueda</title>
-
+    <!-- EBSCOhost Custom Search Box Begins -->
+    <script src="http://support.ebscohost.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
+    
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
@@ -118,19 +120,35 @@
                     Tu respuestas son: {{tema}} {{quien}} {{que}} {{cuando}} {{donde}}
                 </div>
                 
+                
                   <div class="row">
-                    <form class="col s12">
+                    <form id="ebscohostCustomSearchBox" class="col s12" id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
                       <div class="row">
-                        <div class="input-field col s12">
-                          <input id="email" type="email" class="validate">
-                          <label for="email" data-error="wrong" data-success="right">¿Tu formulación?</label>
+                        <div class="input-field col s6">
+                            <!-- Ebsco -->
+                            <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+                            <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&mode=bool&lang=en" />
+                            <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+                            <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+                            <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />    
+                            <!-- -->
+                            
+                          <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="Placeholder" id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
                         </div>
-                      </div>
+                        <div class="input-field col s6">
+                           <button class="btn waves-effect waves-light" type="submit" value="Search" name="action">Submit<i class="material-icons right">send</i></button>
+                        </div>
+                        
+                        <input type="checkbox" id="chkFullText" name="chkFullText"  />
+                        <input type="checkbox" id="chkLibraryCollection" name="chkLibraryCollection"  />  
+                        <input type="checkbox" id="chkPeerReviewed" name="chkPeerReviewed"  />
+                        <input type="checkbox" id="chkCatalogOnly" name="chkCatalogOnly"  />
+                        <input type="checkbox" id="" name="" value="AERO"  />
+                          
+                        
                     </form>
                   </div>
-                
-                
-                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>buscar</a>
             </div> <!-- div col s12 m10 l10 -->
                         
             <div class="col s12 m1 l1"><p></p></div>
