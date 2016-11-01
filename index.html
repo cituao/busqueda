@@ -4,6 +4,7 @@
 
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="app.js"></script>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,12 +15,33 @@
     <meta charset="utf-8">
 
 <body ng-controller="BusquedaController">
+    
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Biblioteca UAO</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#"></a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <!-- <h1 class="header center orange-text">¡Buscar!</h1> -->
+          <div class="row center">
+            <h5 class="header col s12 light">Topic narrowing</h5>
+          </div>
+        </div>
+    </div>
+    
     <div class="container">
+        <div class="divider"></div>
         <div class="row">
             <div class="col s12">
-                <div class="valign-wrapper">
-                    <h1 class="valign center-align">Biblioteca UAO</h1>
-                </div>
             </div>
             <div class="col s12 m1 l1"><p></p></div>
             <div class="col s12 m10 l10">
@@ -78,18 +100,35 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="cuando" type="text" class="validate" ng-model="donde">
-                          <label for="cuando">¿Donde?</label>
+                          <input id="donde" type="text" class="validate" ng-model="donde">
+                          <label for="donde">¿Donde?</label>
                       </div>
                   </div> <!-- div row donde -->
-                
+                  <div class="divider"></div>
+                <!--
                 <div class="collection">
                     <a href="#!" class="collection-item">Tema:{{tema}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Quién?:{{quien}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Qué?:{{que}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Cuándo?:{{cuando}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Dónde?:{{donde}}<span class="badge">1</span
+                </div> -->
+                
+                <div class="row">
+                    Tu respuestas son: {{tema}} {{quien}} {{que}} {{cuando}} {{donde}}
                 </div>
+                
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email" data-error="wrong" data-success="right">¿Tu formulación?</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                
                 
                 <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>buscar</a>
             </div> <!-- div col s12 m10 l10 -->
