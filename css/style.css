@@ -1,7 +1,31 @@
-#divtema.ng-hide {
-    opacity: 1;
+.showdivquien.ng-hide-add, .showdivquien.ng-hide-remove{
+    transition: all linear 0.5s;
 }
 
-#divtema {
-    opacity: 0.6;
+.showdivquien.ng-hide {
+    opacity: 0;
+}
+
+.showdivque.ng-hide-add, .showdivque.ng-hide-remove{
+    transition: all linear 0.5s;
+}
+
+.showdivque.ng-hide {
+    opacity: 0;
+}
+
+.showdivcuando.ng-hide-add, .showdivcuando.ng-hide-remove{
+    transition: all linear 0.5s;
+}
+
+.showdivcuando.ng-hide {
+    opacity: 0;
+}
+
+.showdivdonde.ng-hide-add, .showdivdonde.ng-hide-remove{
+    transition: all linear 0.5s;
+}
+
+.showdivdonde.ng-hide {
+    opacity: 0;
 }

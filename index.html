@@ -48,55 +48,55 @@
             <div class="col s12 m1 l1"><p></p></div>
             <div class="col s12 m10 l10">
                   <!-- TEMA -->  
-                  <div class="row">
+                  <div id="divtema" class="row">
                       <div class="card-panel red lighten-2">
                           <span class="white-text">¿Qué le interesa en la investigación para su proyecto? Escriba el tema general:
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="que" type="text" class="validate" ng-model="tema">
+                          <input id="que" type="text" class="validate" ng-model="tema" ng-keypress="showQuien()">
                           <label for="tema">Tema</label>
                       </div>
                   </div> <!-- div row TEMA-->
 
                   <!-- QUIEN -->  
-                  <div class="row">
+                  <div id="divquien" class="row showdivquien" ng-show="mostrarQuien">
                       <div class="card-panel orange darken-2">
                           <span class="white-text">Preguntate ¿a quién impacta el tema? ¿Qué población?..Personas, animales, el ambiente?:
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="que" type="text" class="validate" ng-model="quien">
+                          <input id="que" type="text" class="validate" ng-model="quien" ng-keypress="showQue()">
                           <label for="tema">¿Quién?</label>
                       </div>
                   </div> <!-- div row QUIEN -->
 
-                  <!-- QUE -->  
-                  <div class="row">
+                  <!-- QUE -->
+                  <div id="divque" class="row showdivque" ng-show="mostrarQue">
                       <div class="card-panel teal">
                           <span class="white-text">¿Qué aspecto del tema estás interesado? ¿las causas? Los efectos o implicaciones? ¿Las soluciones?:
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="que" type="text" class="validate" ng-model="que">
+                          <input id="que" type="text" class="validate" ng-model="que" ng-keypress="showCuando()">
                           <label for="que">¿Qué?</label>
                       </div>
                   </div> <!-- div row QUE -->
                 
-                  <!-- CUANDO -->
-                  <div class="row">
+                   
+                  <div id="divcuando" class="row showdivcuando" ng-show="mostrarCuando">
                       <div class="card-panel green">
                           <span class="white-text">¿Preguntate cuándo? ¿En la actualidad? ¿En el pasado? ¿Relacionado a un evento específico? o ¿En el futuro? :
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="cuando" type="text" class="validate" ng-model="cuando">
+                          <input id="cuando" type="text" class="validate" ng-model="cuando" ng-keypress="showDonde()">
                           <label for="cuando">¿Cuándo?</label>
                       </div>
                   </div> <!-- div row CUANDO --> 
 
-                  <!-- CUANDO -->
-                  <div class="row">
+                  <!-- DONDE -->
+                  <div id="divdonde" class="row showdivdonde" ng-show="mostrarDonde">
                       <div class="card-panel blue darken-4">
                           <span class="white-text">Preguntate ¿En dónde? Paises, regiones, estados, lugares (espacios de trabajo, escuelas, virtualmente) :
                           </span>
@@ -114,7 +114,7 @@
                     <a href="#!" class="collection-item">¿Qué?:{{que}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Cuándo?:{{cuando}}<span class="badge">1</span></a>
                     <a href="#!" class="collection-item">¿Dónde?:{{donde}}<span class="badge">1</span
-                </div> -->
+                </div> 
                 
                 <div class="row">
                     Tu respuestas son: {{tema}} {{quien}} {{que}} {{cuando}} {{donde}}
@@ -125,13 +125,13 @@
                     <form id="ebscohostCustomSearchBox" class="col s12" id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
                       <div class="row">
                         <div class="input-field col s6">
-                            <!-- Ebsco -->
+                            <!-- Ebsco 
                             <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
                             <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&mode=bool&lang=en" />
                             <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
                             <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
                             <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />    
-                            <!-- -->
+                            
                             
                           <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="Placeholder" id="first_name" type="text" class="validate">
                           <label for="first_name">First Name</label>
@@ -149,6 +149,7 @@
                         
                     </form>
                   </div>
+                -->
             </div> <!-- div col s12 m10 l10 -->
                         
             <div class="col s12 m1 l1"><p></p></div>

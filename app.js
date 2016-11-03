@@ -9,4 +9,24 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     $scope.quien = '';
     $scope.cuando = '';
     $scope.sw = true;
+    $scope.mostrarQuien = false;
+    $scope.mostrarQue = false;
+    $scope.mostrarCuando = false;
+    $scope.mostrarDonde = false;
+    
+    $scope.showQuien = function(){
+        $scope.mostrarQuien = true;
+    }
+    
+    $scope.showQue = function() {
+        $scope.mostrarQue = true;
+    }
+    
+    $scope.showCuando = function() {
+        $scope.mostrarCuando = true;
+    }
+    
+    $scope.showDonde = function() {
+        $scope.mostrarDonde = true;
+    }
 })
