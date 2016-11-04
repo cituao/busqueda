@@ -1,3 +1,7 @@
+.divhide {
+    opacity: 0;
+}
+
 .showdivquien.ng-hide-add, .showdivquien.ng-hide-remove{
     transition: all linear 0.5s;
 }

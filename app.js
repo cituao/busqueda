@@ -14,19 +14,27 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     $scope.mostrarCuando = false;
     $scope.mostrarDonde = false;
     
-    $scope.showQuien = function(){
-        $scope.mostrarQuien = true;
+    $scope.showQuien = function(teclaPresionada){
+        if (teclaPresionada.which == 13){
+            $scope.mostrarQuien = true;
+        }
     }
     
-    $scope.showQue = function() {
-        $scope.mostrarQue = true;
+    $scope.showQue = function(teclaPresionada) {
+        if (teclaPresionada.which == 13){
+            $scope.mostrarQue = true;
+        }
     }
     
-    $scope.showCuando = function() {
-        $scope.mostrarCuando = true;
+    $scope.showCuando = function(teclaPresionada) {
+        if (teclaPresionada.which == 13){
+            $scope.mostrarCuando = true;
+        }
     }
     
-    $scope.showDonde = function() {
-        $scope.mostrarDonde = true;
+    $scope.showDonde = function(teclaPresionada) {
+        if (teclaPresionada.which == 13){
+            $scope.mostrarDonde = true;    
+        }
     }
 })
