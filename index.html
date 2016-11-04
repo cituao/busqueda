@@ -2,9 +2,7 @@
 <html lang="es" ng-app="busquedaApp">
     <title>Búsqueda</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
-    <script src="app.js"></script>
+
    
 
     <!--Import Google Icon Font-->
@@ -58,7 +56,6 @@
                       </div>
                   </div> <!-- div row TEMA-->
 
-                  <!-- QUIEN -->  
                   <div id="divquien" class="row showdivquien divhide" ng-show="mostrarQuien">
                       <div class="card-panel orange darken-2">
                           <span class="white-text">Preguntate ¿a quién impacta el tema? ¿Qué población?..Personas, animales, el ambiente?:
@@ -69,8 +66,7 @@
                           <label for="tema">¿Quién?</label>
                       </div>
                   </div> <!-- div row QUIEN -->
-
-                  <!-- QUE -->
+                  
                   <div id="divque" class="row showdivque divhide" ng-show="mostrarQue">
                       <div class="card-panel teal">
                           <span class="white-text">¿Qué aspecto del tema estás interesado? ¿las causas? Los efectos o implicaciones? ¿Las soluciones?:
@@ -82,7 +78,6 @@
                       </div>
                   </div> <!-- div row QUE -->
                 
-                   
                   <div id="divcuando" class="row showdivcuando divhide" ng-show="mostrarCuando">
                       <div class="card-panel green">
                           <span class="white-text">¿Preguntate cuándo? ¿En la actualidad? ¿En el pasado? ¿Relacionado a un evento específico? o ¿En el futuro? :
@@ -92,9 +87,8 @@
                           <input id="cuando" type="text" class="validate" ng-model="cuando" ng-keypress="showDonde($event)">
                           <label for="cuando">¿Cuándo?</label>
                       </div>
-                  </div> <!-- div row CUANDO --> 
+                  </div> <!-- div row CUANDO -->
 
-                  <!-- DONDE -->
                   <div id="divdonde" class="row showdivdonde divhide" ng-show="mostrarDonde">
                       <div class="card-panel blue darken-4">
                           <span class="white-text">Preguntate ¿En dónde? Paises, regiones, estados, lugares (espacios de trabajo, escuelas, virtualmente) :
@@ -155,7 +149,9 @@
             <div class="col s12 m1 l1"><p></p></div>
         </div> <!-- div row -->
     </div> <!-- div container -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="app.js"></script>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->

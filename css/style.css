@@ -1,5 +1,11 @@
 .divhide {
+    display: none;
     opacity: 0;
+}
+
+.showdivquien{
+    transition: all linear 0.5s;
+    opacity: 1;
 }
 
 .showdivquien.ng-hide-add, .showdivquien.ng-hide-remove{
@@ -10,6 +16,11 @@
     opacity: 0;
 }
 
+.showdivque{
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+
 .showdivque.ng-hide-add, .showdivque.ng-hide-remove{
     transition: all linear 0.5s;
 }
@@ -18,12 +29,22 @@
     opacity: 0;
 }
 
+.showdivcuando{
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+
 .showdivcuando.ng-hide-add, .showdivcuando.ng-hide-remove{
     transition: all linear 0.5s;
 }
 
 .showdivcuando.ng-hide {
     opacity: 0;
+}
+
+.showdivdonde{
+    transition: all linear 0.5s;
+    opacity: 1;
 }
 
 .showdivdonde.ng-hide-add, .showdivdonde.ng-hide-remove{
