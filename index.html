@@ -48,18 +48,18 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputema" type="text" class="validate" ng-model="tema" ng-keypress="showQuien($event)">
+                          <input id="inputema" type="text" class="validate" ng-model="tema" ng-keypress="showQuien($event)" autofocus>
                           <label for="tema">Tema</label>
                       </div>
                   </div> <!-- div row TEMA-->
 
-                  <div id="divquien" class="row showdivquien divhide" ng-show="mostrarQuien" ng-focus="mostrarQuien">
+                  <div id="divquien" class="row showdivquien divhide" ng-show="mostrarQuien">
                       <div class="card-panel orange darken-2">
                           <span class="white-text">Preguntate ¿a quién impacta el tema? ¿Qué población?..Personas, animales, el ambiente?:
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputquien" type="text" class="validate" ng-model="quien" ng-keypress="showQue($event)">
+                          <input id="inputquien" type="text" class="validate" ng-model="quien" ng-keypress="showQue($event)"   show-focus="mostrarQuien">
                           <label for="tema">¿Quién?</label>
                       </div>
                   </div> <!-- div row QUIEN -->
@@ -70,7 +70,7 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputque" type="text" autofocus class="validate" ng-model="que" ng-keypress="showCuando($event)">
+                          <input id="inputque" type="text" autofocus class="validate" ng-model="que" ng-keypress="showCuando($event)" show-focus="mostrarQue">
                           <label for="que">¿Qué?</label>
                       </div>
                   </div> <!-- div row QUE -->
@@ -81,7 +81,7 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputcuando" type="text" autofocus class="validate" ng-model="cuando" ng-keypress="showDonde($event)">
+                          <input id="inputcuando" type="text" autofocus class="validate" ng-model="cuando" ng-keypress="showDonde($event)" show-focus="mostrarCuando">
                           <label for="cuando">¿Cuándo?</label>
                       </div>
                   </div> <!-- div row CUANDO -->
@@ -92,7 +92,7 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="mostrarMapaMental()">
+                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="mostrarMapaMental()" show-focus="mostrarDonde">
                           <label for="donde">¿Donde?</label>
                       </div>
                   </div> <!-- div row donde -->
