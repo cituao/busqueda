@@ -4,53 +4,41 @@
 }
 
 .showdivquien{
-    transition: all linear 0.5s;
     opacity: 1;
-}
-
-.showdivquien.ng-hide-add, .showdivquien.ng-hide-remove{
-    transition: all linear 0.5s;
+	transition: all linear 0.5s;
 }
 
 .showdivquien.ng-hide {
     opacity: 0;
+	background-color: transparent;
 }
 
 .showdivque{
-    transition: all linear 0.5s;
     opacity: 1;
-}
-
-.showdivque.ng-hide-add, .showdivque.ng-hide-remove{
-    transition: all linear 0.5s;
+	transition: all linear 0.5s;
 }
 
 .showdivque.ng-hide {
     opacity: 0;
+	background-color: transparent;
 }
 
 .showdivcuando{
-    transition: all linear 0.5s;
     opacity: 1;
-}
-
-.showdivcuando.ng-hide-add, .showdivcuando.ng-hide-remove{
-    transition: all linear 0.5s;
+	transition: all linear 0.5s;
 }
 
 .showdivcuando.ng-hide {
     opacity: 0;
+	background-color: transparent;
 }
 
 .showdivdonde{
-    transition: all linear 0.5s;
     opacity: 1;
-}
-
-.showdivdonde.ng-hide-add, .showdivdonde.ng-hide-remove{
-    transition: all linear 0.5s;
+	transition: all linear 0.5s;
 }
 
 .showdivdonde.ng-hide {
     opacity: 0;
+	background-color: transparent;
 }

@@ -18,8 +18,6 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
         if (teclaPresionada.which == 13){
             document.getElementById("divquien").style.display = 'inline';
             $scope.mostrarQuien = true;
-            //element = document.getElementById("inputquien");
-            //element.focus();
         }
     }
     
@@ -27,9 +25,6 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
         if (teclaPresionada.which == 13){
             document.getElementById("divque").style.display = 'inline';
             $scope.mostrarQue = true;
-            //element = document.getElementById("inputque");
-            //element.focus();
-
         }
     }
     
@@ -37,8 +32,6 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
         if (teclaPresionada.which == 13){
             document.getElementById("divcuando").style.display = 'inline';
             $scope.mostrarCuando = true;
-            //element = document.getElementById("inputcuando");
-            //element.focus();
         }
     }
     
@@ -46,9 +39,6 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
         if (teclaPresionada.which == 13){
             document.getElementById("divdonde").style.display = 'inline';
             $scope.mostrarDonde = true;
-            //element = document.getElementById("inputdonde");
-            //element.focus();
-
         }
     }
   
