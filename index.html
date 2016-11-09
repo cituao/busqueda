@@ -42,7 +42,7 @@
             <div class="col s12 m1 l1"><p></p></div>
             <div class="col s12 m10 l10">
                   <!-- TEMA -->  
-                  <div id="divtema" class="row">
+                  <div id="divtema" class="row showdivquien" ng-show="mostrarTema">
                       <div class="card-panel red lighten-2">
                           <span class="white-text">¿Qué le interesa en la investigación para su proyecto? Escriba el tema general:
                           </span>
@@ -92,9 +92,50 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="mostrarMapaMental()" show-focus="mostrarDonde">
+                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="mostrarMapaMental($event)" show-focus="mostrarDonde">
                           <label for="donde">¿Donde?</label>
                       </div>
+                  </div> <!-- div row donde -->
+                
+                  <div id="divmapamental" class="row showdivmapamental divhide" ng-show="mostrarMapaMental">
+                      <div class="card-panel blue darken-4">
+                          <span class="white-text">Mapa mental con las preguntas generadoras:</span>
+                      </div>
+
+                      <div class="row">
+                          <div class="col s4 z-depth-4 nodo">
+                              <p class="nodofuentea">Quién:</p>
+                              <p class="nodofuenteb">{{ quien }}</p>
+                          </div>
+                          <div class="col s2"><img class="imgarc" src="img/arc.svg"/></div>
+                          <div class="col s2"><img class="imgarc" src="img/arc2.svg"/></div>
+                          <div class="col s4 z-depth-4 nodo">
+                              <p class="nodofuentea">Qué:</p>
+                              <p class="nodofuenteb">{{ que }}</p>
+                          </div>
+                      </div>
+
+                      <div class="row">  
+                          <div class="col s4"></div>
+                          <div class="col s4 z-depth-4 nodo">
+                              <p class="nodofuentea">Tema:</p>
+                              <p class="nodofuenteb">{{ tema }}</p>                         
+                          </div>
+                          <div class="col s4"></div>
+                      </div>  
+
+                      <div class="row">  
+                          <div class="col s4 z-depth-4 nodo">
+                              <p class="nodofuentea">Donde:</p>
+                              <p class="nodofuenteb">{{ donde }}</p>
+                          </div>
+                          <div class="col s2"><img class="imgarc" src="img/arc3.svg"/></div>
+                          <div class="col s2"><img class="imgarc" src="img/arc4.svg"/></div>
+                          <div class="col s4 z-depth-4 nodo">
+                             <p class="nodofuentea">Cuándo:</p>
+                             <p class="nodofuenteb">{{ cuando }}</p>
+                          </div>
+                      </div>  
                   </div> <!-- div row donde -->
                   
                 <!--
@@ -136,8 +177,6 @@
                         <input type="checkbox" id="chkPeerReviewed" name="chkPeerReviewed"  />
                         <input type="checkbox" id="chkCatalogOnly" name="chkCatalogOnly"  />
                         <input type="checkbox" id="" name="" value="AERO"  />
-                          
-                        
                     </form>
                   </div>
                 -->

@@ -1,6 +1,32 @@
+
+.imgarc{
+    max-width: 100%;
+}
+
+.row:nth-child(4) .col.s4{
+    margin-top: 10%;
+
+}
+
+.nodo {
+    border-radius: 25px;
+    background-color: #004d40;
+    height: 100px;
+}
+
 .divhide {
     display: none;
     opacity: 0;
+}
+
+.showdivtema{
+    opacity: 1;
+	transition: all linear 0.5s;
+}
+
+.showdivtema.ng-hide {
+    opacity: 0;
+	background-color: transparent;
 }
 
 .showdivquien{
@@ -42,3 +68,28 @@
     opacity: 0;
 	background-color: transparent;
 }
+
+.showdivmapamental{
+    opacity: 1;
+	transition: all linear 0.5s;
+}
+
+.showdivmapamental.ng-hide {
+    opacity: 0;
+	background-color: transparent;
+}
+
+.nodofuentea{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+}
+
+.nodofuenteb{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+}
+

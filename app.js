@@ -9,10 +9,12 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     $scope.quien = '';
     $scope.cuando = '';
     
+    $scope.mostrarTema = true;
     $scope.mostrarQuien = false;
     $scope.mostrarQue = false;
     $scope.mostrarCuando = false;
     $scope.mostrarDonde = false;
+    $scope.mostrarMapaMental = false;
     
     $scope.showQuien = function(teclaPresionada){
         if (teclaPresionada.which == 13){
@@ -41,6 +43,14 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
             $scope.mostrarDonde = true;
         }
     }
+    
+    $scope.mostrarMapaMental = function(teclaPresionada) {
+        if (teclaPresionada.which == 13){
+            document.getElementById("divmapamental").style.display = 'inline';
+            $scope.mostrarMapaMental = true;
+        }
+    }
+
   
 })
 
