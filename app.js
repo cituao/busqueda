@@ -8,6 +8,7 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     $scope.donde = '';
     $scope.quien = '';
     $scope.cuando = '';
+	$scope.pregunta = '';
     
     $scope.mostrarTema = true;
     $scope.mostrarQuien = false;
@@ -15,6 +16,7 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     $scope.mostrarCuando = false;
     $scope.mostrarDonde = false;
     $scope.mostrarMapaMental = false;
+	$scope.mostrarPregunta = false;
     
     $scope.showQuien = function(teclaPresionada){
         if (teclaPresionada.which == 13){
@@ -44,14 +46,26 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
         }
     }
     
-    $scope.mostrarMapaMental = function(teclaPresionada) {
+    $scope.showMapaMental = function(teclaPresionada) {
         if (teclaPresionada.which == 13){
-            document.getElementById("divmapamental").style.display = 'inline';
-            $scope.mostrarMapaMental = true;
+			document.getElementById("divmapamental").style.display = 'inline';
+			document.getElementById("divpregunta").style.display = 'inline';
+			$scope.mostrarMapaMental = true;
+			$scope.mostrarPregunta = true;
+
+			$scope.mostrarTema = false;
+			$scope.mostrarQuien = false;
+			$scope.mostrarQue = false;
+			$scope.mostrarCuando = false;
+			$scope.mostrarDonde = false;
         }
     }
-
-  
+	
+	$scope.buscarEbsco = function(teclaPresionada) {
+		if (teclaPresionada.which == 13){
+			
+		}	
+	}
 })
 
 busquedaApp.directive('showFocus', function($timeout) {

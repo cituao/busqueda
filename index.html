@@ -29,7 +29,7 @@
         <div class="container">
           <!-- <h1 class="header center orange-text">¡Buscar!</h1> -->
           <div class="row center">
-            <h5 class="header col s12 light">Topic narrowing</h5>
+            <h5 class="header col s12 light">¡Ahondemos en el tema!</h5>
           </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
                           </span>
                       </div>
                       <div class="input-field col s12">
-                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="mostrarMapaMental($event)" show-focus="mostrarDonde">
+                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="showMapaMental($event)" show-focus="mostrarDonde">
                           <label for="donde">¿Donde?</label>
                       </div>
                   </div> <!-- div row donde -->
@@ -136,7 +136,18 @@
                              <p class="nodofuenteb">{{ cuando }}</p>
                           </div>
                       </div>  
-                  </div> <!-- div row donde -->
+                  </div> <!-- div row mapa mental -->
+				  
+				  
+				<div id="divpregunta" class="row showdivpregunta divhide" ng-show="mostrarMapaMental">
+                      <div class="card-panel blue darken-4">
+                          <span class="white-text">¡Crea tu pregunta de investigación!</span>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="inputpregunta" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
+                          <label for="pregunta">Pregunta de investigación</label>
+                      </div>
+                </div> <!-- div row pregunta -->
                   
                 <!--
                 <div class="divider"></div>

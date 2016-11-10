@@ -79,6 +79,16 @@
 	background-color: transparent;
 }
 
+.showdivpregunta{
+    opacity: 1;
+	transition: all linear 0.5s;
+}
+
+.showdivpregunta.ng-hide {
+    opacity: 0;
+	background-color: transparent;
+}
+
 .nodofuentea{
     color: #ffffff;
     font-size: 18px;
