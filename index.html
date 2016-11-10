@@ -142,56 +142,21 @@
 					  <div class="card-panel deep-orange accent-4">
 						  <span class="white-text">Crea tu pregunta de investigación en base a los elementos del mapa mental! Por ejemplo: ¿Cómo el cambio climático ha alterado las técnicas de siembra en Colombia en los últimos 10 años?</span>
 					  </div>
-					  <div class="input-field col s12">
-						  <input id="inputpregunta" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
-						  <label for="pregunta">Pregunta de investigación</label>
-					  </div>
-				</div> <!-- div row pregunta -->
-                  
-                <!--
-                <div class="divider"></div>
-                <div class="collection">
-                    <a href="#!" class="collection-item">Tema:{{tema}}<span class="badge">1</span></a>
-                    <a href="#!" class="collection-item">¿Quién?:{{quien}}<span class="badge">1</span></a>
-                    <a href="#!" class="collection-item">¿Qué?:{{que}}<span class="badge">1</span></a>
-                    <a href="#!" class="collection-item">¿Cuándo?:{{cuando}}<span class="badge">1</span></a>
-                    <a href="#!" class="collection-item">¿Dónde?:{{donde}}<span class="badge">1</span
-                </div> 
-                
-                <div class="row">
-                    Tu respuestas son: {{tema}} {{quien}} {{que}} {{cuando}} {{donde}}
-                </div>
-                
-                
-                  <div class="row">
-                    <form id="ebscohostCustomSearchBox" class="col s12" id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
-                      <div class="row">
-                        <div class="input-field col s6">
-                            <!-- Ebsco 
+					  <form id="ebscohostCustomSearchBox" id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
                             <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
                             <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&mode=bool&lang=en" />
                             <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
                             <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
                             <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />    
-                            
-                            
-                          <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="Placeholder" id="first_name" type="text" class="validate">
-                          <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                           <button class="btn waves-effect waves-light" type="submit" value="Search" name="action">Submit<i class="material-icons right">send</i></button>
-                        </div>
-                        
-                        <input type="checkbox" id="chkFullText" name="chkFullText"  />
-                        <input type="checkbox" id="chkLibraryCollection" name="chkLibraryCollection"  />  
-                        <input type="checkbox" id="chkPeerReviewed" name="chkPeerReviewed"  />
-                        <input type="checkbox" id="chkCatalogOnly" name="chkCatalogOnly"  />
-                        <input type="checkbox" id="" name="" value="AERO"  />
-                    </form>
-                  </div>
-                -->
+						  <div class="input-field col s12">
+							  <input id="ebscohostsearchtext" id="first_name" name="ebscohostsearchtext" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
+							  <div class="input-field col s6">
+								   <button class="btn waves-effect waves-light" type="submit" value="Search" name="action">Buscar!<i class="material-icons right">send</i></button>							  </div>
+							  <label for="pregunta">Pregunta de investigación</label>
+						  </div>
+					  </form>
+				</div> <!-- div row pregunta -->
             </div> <!-- div col s12 m10 l10 -->
-                        
             <div class="col s12 m1 l1"><p></p></div>
         </div> <!-- div row -->
     </div> <!-- div container -->
@@ -204,6 +169,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <!-- EBSCOhost Custom Search Box Begins -->
     <script src="http://support.ebscohost.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
-
 </body>
 </html>
