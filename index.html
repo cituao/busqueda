@@ -98,8 +98,8 @@
                   </div> <!-- div row donde -->
                 
                   <div id="divmapamental" class="row showdivmapamental divhide" ng-show="mostrarMapaMental">
-                      <div class="card-panel blue darken-4">
-                          <span class="white-text">Mapa mental con las preguntas generadoras:</span>
+                      <div class="card-panel green darken-4">
+                          <span class="white-text">Este mapa mental puede ayudarte a formular la pregunta de investigación:</span>
                       </div>
 
                       <div class="row">
@@ -138,16 +138,15 @@
                       </div>  
                   </div> <!-- div row mapa mental -->
 				  
-				  
 				<div id="divpregunta" class="row showdivpregunta divhide" ng-show="mostrarMapaMental">
-                      <div class="card-panel blue darken-4">
-                          <span class="white-text">¡Crea tu pregunta de investigación!</span>
-                      </div>
-                      <div class="input-field col s12">
-                          <input id="inputpregunta" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
-                          <label for="pregunta">Pregunta de investigación</label>
-                      </div>
-                </div> <!-- div row pregunta -->
+					  <div class="card-panel deep-orange accent-4">
+						  <span class="white-text">Crea tu pregunta de investigación en base a los elementos del mapa mental! Por ejemplo: ¿Cómo el cambio climático ha alterado las técnicas de siembra en Colombia en los últimos 10 años?</span>
+					  </div>
+					  <div class="input-field col s12">
+						  <input id="inputpregunta" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
+						  <label for="pregunta">Pregunta de investigación</label>
+					  </div>
+				</div> <!-- div row pregunta -->
                   
                 <!--
                 <div class="divider"></div>
