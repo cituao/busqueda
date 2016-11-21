@@ -20,28 +20,24 @@ busquedaApp.controller('BusquedaController', function BusquedaController($scope)
     
     $scope.showQuien = function(teclaPresionada){
         if (teclaPresionada.which == 13){
-            document.getElementById("divquien").style.display = 'inline';
             $scope.mostrarQuien = true;
         }
     }
     
     $scope.showQue = function(teclaPresionada) {
         if (teclaPresionada.which == 13){
-            document.getElementById("divque").style.display = 'inline';
             $scope.mostrarQue = true;
         }
     }
     
     $scope.showCuando = function(teclaPresionada) {
         if (teclaPresionada.which == 13){
-            document.getElementById("divcuando").style.display = 'inline';
             $scope.mostrarCuando = true;
         }
     }
     
     $scope.showDonde = function(teclaPresionada) {
         if (teclaPresionada.which == 13){
-            document.getElementById("divdonde").style.display = 'inline';
             $scope.mostrarDonde = true;
         }
     }
@@ -79,3 +75,4 @@ busquedaApp.directive('showFocus', function($timeout) {
       },true);
   };    
 });
+

@@ -1,21 +1,35 @@
+body{
+    background-color: grey lighten-4;
+}
 .imgarc{
     max-width: 100%;
 }
 
-.row:nth-child(4) .col.s4{
-    margin-top: 10%;
+.headertitle{
+    line-height:18px; 
 
 }
+a{
+  color: #757575;
+}
+nav{
+    
+    background-color: white !important;
+    margin-bottom: 30px;
+}
+
 
 .nodo {
-    border-radius: 25px;
+    border-radius: 4px;
     background-color: #004d40;
-    height: 100px;
+  overflow-wrap: break-word;
+  text-transform: capitalize;
 }
 
-.divhide {
-    display: none;
+.boxElement{
+
     opacity: 0;
+    margin: 30px 0;
 }
 
 .showdivtema{
@@ -31,6 +45,10 @@
 .showdivquien{
     opacity: 1;
 	transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
 }
 
 .showdivquien.ng-hide {
@@ -41,6 +59,10 @@
 .showdivque{
     opacity: 1;
 	transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
 }
 
 .showdivque.ng-hide {
@@ -51,6 +73,10 @@
 .showdivcuando{
     opacity: 1;
 	transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
 }
 
 .showdivcuando.ng-hide {
@@ -61,6 +87,10 @@
 .showdivdonde{
     opacity: 1;
 	transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
 }
 
 .showdivdonde.ng-hide {
@@ -92,12 +122,85 @@
     color: #ffffff;
     font-size: 18px;
     text-align: center;
-    font-style: italic;
+    
 }
-
+.italic{
+   font-style: italic;
+}
 .nodofuenteb{
-    color: #ffffff;
     font-size: 18px;
-    text-align: center;
-    font-weight: normal;
+    text-align: center; 
+}
+.input-field#quest-card-input .prefix.active {
+     color: #757575;
+   }
+
+.input-field#quest-card-input input[type=text]:focus + label {
+     color: #757575;
+   }
+.input-field#quest-card-input input[type=text].valid{
+  color: #e0e0e0;
+  border-bottom: 1px solid #81d4fa;
+     box-shadow: 0 1px 0 0 #81d4fa;
+}
+.input-field#quest-card-input input[type=text]:focus {
+     border-bottom: 1px solid #757575;
+     box-shadow: 0 1px 0 0 #757575;
+      color: white;
+   }
+
+.input-field .prefix.active {
+     color: #b71c1c;
+   }
+.input-field input[type=text]:focus + label {
+     color: #b71c1c;
+   }
+ .input-field input[type=text]:focus {
+     border-bottom: 1px solid #ef5350;
+     box-shadow: 0 1px 0 0 #ef5350;
+   }
+
+  .input-field input[type=text].valid {
+     border-bottom: 1px solid #01579b;
+     box-shadow: 0 1px 0 0 #01579b;
+   }
+.offset-up{
+  position: relative;
+  top: -40px;
+}
+.offset-down{
+  position: relative;
+  top: 48px;
+}
+#example-card{
+  margin-top: 20px;
+}
+.rounded{
+  border-radius: 50%; 
+  padding: 3.5% !important;
+  font-weight: bold;
+}
+.relative{
+  position: relative;
+}
+.fixed{
+  position: fixed;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.quest-card{
+  bottom: 39px;
+  width: 60%;
+}
+form{
+  margin-top: 26px;
+}
+footer{
+  line-height: 16px;
+  font-size: 14px;
+}
+footer p{
+  padding-top: 5px;
+  padding-left: 44px;
 }

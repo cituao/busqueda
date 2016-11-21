@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="busquedaApp">
     <title>Búsqueda</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="utf-8">
 
 <body ng-controller="BusquedaController">
 
-    <nav class="light-blue lighten-1" role="navigation">
+    <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper container">
-        	<a id="logo-container" href="#" class="brand-logo right"><img src="img/uao-logo.png"></a>
-			  <ul class="left hide-on-med-and-down">
-				<li><a href="#">Centro de Servicios de Información - Biblioteca Universidad Autónoma de Occidente</a></li>
-			  </ul>
-
+            <div class="row">
+                <a href="#"  class="col s12 headertitle grey-text text-lighten-4" >
+                   <img class="left" src="img/logouao.svg" width="130">
+                   <p>Centro de Servicios de Información <br><small>Biblioteca Universidad Autónoma de Occidente</small></p>
+                </a>  
+			</div> 
         </div>
     </nav>
     
@@ -26,137 +28,167 @@
         <div class="container">
           <!-- <h1 class="header center orange-text">¡Buscar!</h1> -->
           <div class="row center">
-            <h5 class="header col s12 light">¡Ahondemos en la investigación!</h5>
+            <h3 class="header col s12 light red-text text-darken-4">¡Ahondemos en la investigación!</h3>
           </div>
+          <div class="fixed-action-btn">
+             <a href="#" class="btn-floating  btn-large red waves-effect waves-light  right"><i class="material-icons right">replay</i></a>
+          </div>            
         </div>
     </div>
     
     <div class="container">
-        <div class="divider"></div>
+       
         <div class="row">
-            <div class="col s12">
-            </div>
-            <div class="col s12 m1 l1"><p></p></div>
-            <div class="col s12 m10 l10">
+            
+           
+            <div class="col s12 relative">
                   <!-- TEMA -->  
-                  <div id="divtema" class="row showdivquien" ng-show="mostrarTema">
-                      <div class="card-panel red lighten-2">
-                          <span class="white-text">¿Qué le interesa en la investigación para su proyecto? Escriba el tema general:
-                          </span>
-                      </div>
-                      <div class="input-field col s12">
-                          <input id="inputema" type="text" class="validate" ng-model="tema" ng-keypress="showQuien($event)" autofocus>
-                          <label for="tema">Tema</label>
-                      </div>
+                  <div id="divtema" class="card row showdivquien boxElement" ng-show="mostrarTema">
+                    <div class="card-content grey-text text-darken-4">
+                        <h5 class="light">¿Qué le interesa en la investigación para su proyecto?</h5> <p class="grey-text text-darken-1">Escriba el tema general.</p>
+                    <br>
+                    <div class="input-field">
+                              <input id="inputema" type="text" class="validate" ng-model="tema" ng-keypress="showQuien($event)" autofocus>
+                              <label for="tema">Tema</label>
+                    </div>
+                    </div>
                   </div> <!-- div row TEMA-->
 
-                  <div id="divquien" class="row showdivquien divhide" ng-show="mostrarQuien">
-                      <div class="card-panel orange darken-2">
-                          <span class="white-text">Preguntate ¿a quién impacta el tema? ¿Qué población?..Personas, animales, el ambiente?:
-                          </span>
-                      </div>
-                      <div class="input-field col s12">
-                          <input id="inputquien" type="text" class="validate" ng-model="quien" ng-keypress="showQue($event)"   show-focus="mostrarQuien">
-                          <label for="tema">¿Quién?</label>
+                  <div id="divquien" class="card row boxElement showdivquien" ng-show="mostrarQuien">
+                      <div class="card-content grey-text text-darken-4">
+                          <h5 class="light">Preguntate ¿a quién impacta el tema?</h5><p class="grey-text text-darken-1">¿Qué población?..Personas, animales, el ambiente?
+                          </p>
+                          <br>
+                          <div class="input-field">
+                              <input id="inputquien" type="text" class="validate" ng-model="quien" ng-keypress="showQue($event)"   show-focus="mostrarQuien">
+                              <label for="tema">¿Quién?</label>
+                          </div>
                       </div>
                   </div> <!-- div row QUIEN -->
                   
-                  <div id="divque" class="row showdivque divhide" ng-show="mostrarQue">
-                      <div class="card-panel teal">
-                          <span class="white-text">¿Qué aspecto del tema estás interesado? ¿las causas? Los efectos o implicaciones? ¿Las soluciones?:
-                          </span>
-                      </div>
-                      <div class="input-field col s12">
-                          <input id="inputque" type="text" autofocus class="validate" ng-model="que" ng-keypress="showCuando($event)" show-focus="mostrarQue">
-                          <label for="que">¿Qué?</label>
-                      </div>
+                  <div id="divque" class="card row showdivque  boxElement" ng-show="mostrarQue">
+                     <div class="card-content grey-text text-darken-4">
+                         <h5 class="light">¿Qué aspecto del tema estás interesado?</h5> <p class="grey-text text-darken-1">¿las causas? Los efectos o implicaciones? ¿Las soluciones?</p>
+                         
+                      <br>
+                     <div class="input-field">
+                              <input id="inputque" type="text" autofocus class="validate" ng-model="que" ng-keypress="showCuando($event)" show-focus="mostrarQue">
+                              <label for="que">¿Qué?</label>
+                     </div>
+                    </div>
                   </div> <!-- div row QUE -->
                 
-                  <div id="divcuando" class="row showdivcuando divhide" ng-show="mostrarCuando">
-                      <div class="card-panel green">
-                          <span class="white-text">¿Preguntate cuándo? ¿En la actualidad? ¿En el pasado? ¿Relacionado a un evento específico? o ¿En el futuro? :
-                          </span>
-                      </div>
-                      <div class="input-field col s12">
+                  <div id="divcuando" class="card row showdivcuando  boxElement" ng-show="mostrarCuando">
+                     <div class="card-content grey-text text-darken-4">
+                         <h5 class="light">¿Preguntate cuándo?</h5> <p class="grey-text text-darken-1">¿En la actualidad? ¿En el pasado? ¿Relacionado a un evento específico? o ¿En el futuro?
+                         </p>
+                          <br>
+                      <div class="input-field">
                           <input id="inputcuando" type="text" autofocus class="validate" ng-model="cuando" ng-keypress="showDonde($event)" show-focus="mostrarCuando">
                           <label for="cuando">¿Cuándo?</label>
                       </div>
+                     </div>     
                   </div> <!-- div row CUANDO -->
 
-                  <div id="divdonde" class="row showdivdonde divhide" ng-show="mostrarDonde">
-                      <div class="card-panel blue darken-4">
-                          <span class="white-text">Preguntate ¿En dónde? Paises, regiones, estados, lugares (espacios de trabajo, escuelas, virtualmente) :
-                          </span>
-                      </div>
-                      <div class="input-field col s12">
-                          <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="showMapaMental($event)" show-focus="mostrarDonde">
-                          <label for="donde">¿Donde?</label>
+                  <div id="divdonde" class="card row showdivdonde divhide boxElement" ng-show="mostrarDonde">
+                       <div class="card-content grey-text text-darken-4">
+                           <h5 class="light">Preguntate ¿En dónde? </h5><p class="grey-text text-darken-1">Paises, regiones, estados, lugares (espacios de trabajo, escuelas, virtualmente).
+                          </p>
+                            <br>
+                          <div class="input-field">
+                              <input id="inputdonde" type="text" autofocus class="validate" ng-model="donde" ng-keypress="showMapaMental($event)" show-focus="mostrarDonde">
+                              <label for="donde">¿Dónde?</label>
+                          </div>
                       </div>
                   </div> <!-- div row donde -->
                 
                   <div id="divmapamental" class="row showdivmapamental divhide" ng-show="mostrarMapaMental">
-                      <div class="card-panel green darken-4">
-                          <span class="white-text">Este mapa mental puede ayudarte a formular la pregunta de investigación:</span>
-                      </div>
-
+                      <p class="grey-text text-darken-1 center light">Este mapa mental puede ayudarte a formular la pregunta de investigación:</p>
+                    <br>
                       <div class="row">
-                          <div class="col s4 z-depth-4 nodo">
-                              <p class="nodofuentea">Quién:</p>
-                              <p class="nodofuenteb">{{ quien }}</p>
+                         <div class="col s12  z-depth-2  card-panel grey darken-4  hide-on-med-and-up nodo">
+                              <!--<p class="nodofuentea  grey-text text-lighten-2"><b>Tema:</b></p>-->
+                              <p class="nodofuenteb uppercase  light white-text">{{ tema }}</p>                         
                           </div>
-                          <div class="col s2"><img class="imgarc" src="img/arc.svg"/></div>
-                          <div class="col s2"><img class="imgarc" src="img/arc2.svg"/></div>
-                          <div class="col s4 z-depth-4 nodo">
-                              <p class="nodofuentea">Qué:</p>
-                              <p class="nodofuenteb">{{ que }}</p>
+                          <div class="row">
+                        <div class="col push-s4 s4 hide-on-med-and-up"><img src="img/arrow.svg"></div>
+                       </div>
+                          <div class="col s12 m4 card-panel yellow accent-1 nodo rounded">
+                              <p class="nodofuentea brown-text text-darken-1">Quién:</p>
+                              <p class="nodofuenteb italic light">{{ quien }}</p>
+                          </div>
+                          <div class="col s2 hide-on-small-only"><img class="imgarc offset-down" src="img/arc.svg"/></div>
+                          <div class="col s2 hide-on-small-only"><img class="imgarc offset-down" src="img/arc2.svg"/></div>
+                          <div class="col push-s4 s4 hide-on-med-and-up"><img src="img/arrow.svg"></div> 
+                          <div class="col s12 m4 card-panel yellow accent-1 nodo rounded">
+                              <p class="nodofuentea brown-text text-darken-1">Qué:</p>
+                              <p class="nodofuenteb italic light grey-text text-darken-4">{{ que }}</p>
                           </div>
                       </div>
 
-                      <div class="row">  
-                          <div class="col s4"></div>
-                          <div class="col s4 z-depth-4 nodo">
-                              <p class="nodofuentea">Tema:</p>
-                              <p class="nodofuenteb">{{ tema }}</p>                         
+                      <div class="row grey-text text-darken-4">  
+                          <div class="col push-m4  m4 z-depth-2  card-panel grey darken-4 nodo hide-on-small-only">
+                              <!--<p class="nodofuentea  grey-text text-lighten-2"><b>Tema:</b></p>-->
+                              <p class="nodofuenteb uppercase  light white-text">{{ tema }}</p>                         
                           </div>
-                          <div class="col s4"></div>
+                     
+                       
                       </div>  
-
-                      <div class="row">  
-                          <div class="col s4 z-depth-4 nodo">
-                              <p class="nodofuentea">Donde:</p>
-                              <p class="nodofuenteb">{{ donde }}</p>
+                      <div class="row">
+                        <div class="col push-s4 s4 hide-on-med-and-up"><img src="img/arrow.svg"></div>
+                      </div>
+                      <div class="row grey-text text-darken-4">  
+                          <div class="col s12 m4 card-panel yellow accent-1 nodo rounded">
+                              <p class="nodofuentea brown-text text-darken-1">Donde:</p>
+                              <p class="nodofuenteb italic light grey-text text-darken-4">{{ donde }}</p>
                           </div>
-                          <div class="col s2"><img class="imgarc" src="img/arc3.svg"/></div>
-                          <div class="col s2"><img class="imgarc" src="img/arc4.svg"/></div>
-                          <div class="col s4 z-depth-4 nodo">
-                             <p class="nodofuentea">Cuándo:</p>
-                             <p class="nodofuenteb">{{ cuando }}</p>
+                          <div class="col s2 hide-on-small-only"><img class="imgarc offset-up" src="img/arc3.svg"/></div>
+                          <div class="col s2 hide-on-small-only"><img class="imgarc offset-up" src="img/arc4.svg"/></div>
+                          <div class="col push-s4 s4 hide-on-med-and-up"><img src="img/arrow.svg"></div>
+                          <div class="col s12 m4 card-panel yellow accent-1 nodo rounded">
+                             <p class="nodofuentea brown-text text-darken-1">Cuándo:</p>
+                             <p class="nodofuenteb italic light grey-text text-darken-4">{{ cuando }}</p>
                           </div>
                       </div>  
                   </div> <!-- div row mapa mental -->
-				  
-				<div id="divpregunta" class="row showdivpregunta divhide" ng-show="mostrarMapaMental">
-					  <div class="card-panel deep-orange accent-4">
-						  <span class="white-text">Crea tu pregunta de investigación en base a los elementos del mapa mental!  Por ejemplo: ¿Cómo el cambio climático ha alterado las técnicas de siembra en Colombia en los últimos 10 años?</span>
-					  </div>
-					  <form id="ebscohostCustomSearchBox" id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
+			
+				<div id="divpregunta" class="row showdivpregunta divhide " ng-show="mostrarMapaMental">
+  
+                  <form id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
                             <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
                             <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://ezproxy.uao.edu.co:2048/login?url=http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&mode=bool&lang=en" />
                             <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
                             <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
                             <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />    
-						  <div class="input-field col s12">
-							  <input id="ebscohostsearchtext" id="first_name" name="ebscohostsearchtext" type="text" autofocus class="validate" ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
-							  <div class="input-field col s6">
-								   <button class="btn waves-effect waves-light" type="submit" value="Search" name="action">Buscar!<i class="material-icons right">send</i></button>							  </div>
-							  <label for="pregunta">Pregunta de investigación</label>
+						    <div class="card grey darken-4 quest-card z-depth-2 col s12">
+                              <div class="card-content">
+                                <div class="input-field" id="quest-card-input">
+                                <input id="ebscohostsearchtext" id="first_name" name="ebscohostsearchtext" type="text" autofocus class="validate " ng-model="pregunta" ng-keypress="buscarEbsco($event)" show-focus="mostrarPregunta">
+                                 <label for="pregunta">Pregunta de investigación</label>
+                                </div>
+                              <button class="btn red waves-effect waves-light right" type="submit" value="Search" name="action">Buscar!<i class="material-icons right">send</i></button>							 
+                              </div>
+                              <br>
 						  </div>
-					  </form>
+				  </form>
+                  <br><br><br><br><br>
+                  <h5 class="light red-text text-darken-4">¡Crea tu pregunta de investigación en base a los elementos del mapa mental!</h5>
+                  <div id="example-card" class="card-panel z-depth-0 flat italic grey lighten-4 grey-text text-darken-3">         
+                    <span class="grey-text text-darken-1">Ejemplo</span> <br>
+                    <p class="grey-text text-darken-2">¿Cómo el cambio climático ha alterado las técnicas de siembra en Colombia en los últimos 10 años?</p>    
+                  </div>
+				
+                  <br>  
 				</div> <!-- div row pregunta -->
+                  
             </div> <!-- div col s12 m10 l10 -->
             <div class="col s12 m1 l1"><p></p></div>
         </div> <!-- div row -->
     </div> <!-- div container -->
+    <footer class="container grey-text text-darken-1 light">
+    <a href="http://cit.uao.edu.co/portal/" target="_blank"><img class="left" width="40px" src="img/citlogo.svg"> <p>Desarrollado por <b><br>Centro de Innovación TIC</b></p></a>
+      <br>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="app.js"></script>
